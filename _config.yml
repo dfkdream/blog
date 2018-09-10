@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "dfkdream's blog"
 title_separator          : "-"
 name                     : "dfkdream"
-description              : "An amazing website."
+description              : "공부한 내용 정리"
 url                      : "dfkdream.github.io"
 baseurl                  : "/blog"
 repository               : "dfkdream/blog"
@@ -113,7 +113,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "dfkdream"
   gitlab           :
   google_plus      :
   keybase          :
