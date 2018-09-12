@@ -5,7 +5,7 @@ categories: CS C
 comments: true
 ---
 
-```C
+~~~c
 #include <stdio.h>
 
 int main(){
@@ -16,7 +16,7 @@ int main(){
     printf("%d\n",i);
     return 0;
 }
-```
+~~~
 
 `scanf`는 문자가 매칭이 안 되고 다음 문자가 whitespace가 아닐 때 까지 읽고 문자열이 남을 경우 나머지를 버퍼에 남긴다.
 
