@@ -11,7 +11,7 @@ Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일
 # Codes
 예제 코드의 실행 결과에는 아래 HTML 노드를 사용했습니다. 편의상 예제 코드에서는 생략하도록 하겠습니다.
 
-*아래 코드는 HTML 문서 전체가 아닌 노드 일부입니다. 문서 전체가 아닌 일부만을 html.Parser 함수에 전달할 경우 파서가 누락된 노드들(`<html>`,`<head>`,`<body>`등)을 알아서 추가합니다.*
+*아래 코드는 HTML 문서 전체가 아닌 노드 일부입니다. 문서 전체가 아닌 일부만을 html.Parse 함수에 전달할 경우 파서가 누락된 노드들(`<html>`,`<head>`,`<body>`등)을 알아서 추가합니다.*
 
 ~~~html
 <ul>
@@ -99,7 +99,7 @@ func renderNode(n *html.Node) string {
 }
 ~~~
 ### 결과
-~~~HTML
+~~~
 <ul>
 	<li>Item 1</li>
 	<li>Item 2</li>
@@ -116,7 +116,7 @@ for d := n.FirstChild; d != nil; d = d.NextSibling {
 }
 ~~~
 ### 결과
-~~~HTML
+~~~
 	<li>Item 1</li>
 	<li>Item 2</li>
 	<li><a href="http://www.example.com">Item 3</a></li>
