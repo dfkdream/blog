@@ -1,7 +1,7 @@
 ---
 title: "Golang HTML 파서 사용하기"
 date: 2018-09-15 02:20:00 +0900
-category: CS Golang
+categories: CS Golang
 comments: true
 ---
 
