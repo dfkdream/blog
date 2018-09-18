@@ -1,6 +1,6 @@
 ---
 title: "Python3 CLI 스크립트에서 표 그리기"
-date: 2018-09-14 15:03:00 +0900
+date: 2018-09-19 00:45:00 +0900
 category: CS Python
 comments: true
 ---
