@@ -1,7 +1,7 @@
 ---
 title: "Python3 CLI 스크립트에서 표 그리기"
 date: 2018-09-19 00:45:00 +0900
-category: CS Python
+categories: CS Python
 comments: true
 ---
 데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다.
