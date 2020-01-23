@@ -165,7 +165,17 @@
           <!-- End new comment form -->
         {% endif %}
       </section>
+    {% when "utterances"}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <script src="https://utteranc.es/client.js"
+              repo="dfkdream/blog"
+              issue-term="pathname"
+              label="comment"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
     {% when "custom" %}
-      <section id="utterances-frame"></section>
+      <section id="custom-comments"></section>
   {% endcase %}
 </div>
