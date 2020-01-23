@@ -166,15 +166,17 @@
         {% endif %}
       </section>
     {% when "utterances" %}
+      {% if site.comments.utterances.repo %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <script src="https://utteranc.es/client.js"
-              repo="dfkdream/blog"
+              repo="{{ site.comments.utterances.repo }}"
               issue-term="pathname"
               label="comment"
               theme="github-light"
               crossorigin="anonymous"
               async>
       </script>
+      {% endif %}
     {% when "custom" %}
       <section id="custom-comments"></section>
   {% endcase %}
