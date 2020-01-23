@@ -171,8 +171,10 @@
       <script src="https://utteranc.es/client.js"
               repo="{{ site.comments.utterances.repo }}"
               issue-term="{{ site.comments.utterances.issue-term | default: "pathname" }}"
-              label="comment"
-              theme="github-light"
+              {% if site.comments.utterances.label %}
+              label="{{ site.comments.utterances.label }}"
+              {% endif %}
+              theme="{{ site.comments.utterances.theme | default: "github-light" }}"
               crossorigin="anonymous"
               async>
       </script>

@@ -39,6 +39,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
   utterances:
     repo                 : "dfkdream/blog"
+    label                : "comment"
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
