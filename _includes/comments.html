@@ -170,7 +170,7 @@
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <script src="https://utteranc.es/client.js"
               repo="{{ site.comments.utterances.repo }}"
-              issue-term="pathname"
+              issue-term="{{ site.comments.utterances.issue-term | default: "pathname" }}"
               label="comment"
               theme="github-light"
               crossorigin="anonymous"
