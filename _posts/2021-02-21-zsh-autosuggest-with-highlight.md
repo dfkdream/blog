@@ -9,6 +9,7 @@ categories: Environment macOS ZSH
 * macOS Big Sur
 * iTerm2 Build 3.3.7
 * oh-my-zsh
+
 # 플러그인 설치
 먼저 더 많은 명령어 자동 완성 목록을 사용하기 위해 [zsh-completions](https://github.com/zsh-users/zsh-completions)를 설치해 줍시다.
 ```zsh
@@ -67,6 +68,7 @@ zsh 5.8 (x86_64-apple-darwin20.1.0)
 iTerm2 설정 (cmd+,) > Profiles > Colors > ANSI Colors > Black > Bright 색상을 다른 색으로 변경해 줍시다. 저의 경우 `#2a5965`로 설정했습니다. 
 
 이러면 이제 진짜로 설정 끝!
+
 # 참고문헌 / 출처
 * [본격 macOS에 개발 환경 구축하기 - Subicura's Blog](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
 * [autosuggestion not working for oh-my-zsh #416 - zsh-users/zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/issues/416#issuecomment-486516333)
