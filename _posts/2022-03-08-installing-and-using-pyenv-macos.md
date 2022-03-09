@@ -8,7 +8,7 @@ comments: true
 pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다.
 
 # 테스트 환경
-* macOS Big Sur
+* macOS Monterey
 * iTerm2
 * ZSH
 
