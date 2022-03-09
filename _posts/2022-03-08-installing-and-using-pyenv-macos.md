@@ -2,6 +2,7 @@
 title: macOS에 pyenv 설치, 사용하기
 date: 2022-03-08 00:00:00 +0900
 categories: Environment macOS Python
+comments: true
 ---
 
 pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다.

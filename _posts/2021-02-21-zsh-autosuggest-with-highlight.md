@@ -2,6 +2,7 @@
 title: zsh-autosuggest와 zsh-syntax-highlighting 충돌 문제 해결
 date: 2020-02-21 00:00:00 +0900
 categories: Environment macOS ZSH
+comments: true
 ---
 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)와 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 macOS에서 이 플러그인들을 설치했더니 플러그인 간에 충돌이 발생해 자동완성된 명령어가 보이지 않거나 하이라이팅이 제대로 되지 않는 문제가 발생했습니다. 이 포스트에서는 이런 문제들을 해결해 보겠습니다.
 
