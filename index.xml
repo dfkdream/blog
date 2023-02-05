@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dfkdream&#39;s blog</title>
+    <link>https://blog.dfkdream.dev/</link>
+    <description>Recent content on dfkdream&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>만료된 GPG 키 갱신하기 (유효기간 연장)</title>
+      <link>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</link>
+      <pubDate>Wed, 30 Mar 2022 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</guid>
+      <description>Github 등 Git 서버에서는 커미터가 자신임을 증명하기 위해 GPG 서명을 사용할 수 있습니다. 이때 사용되는 GPG 키는 보안을 위해 유효기간을 지정하는 것이 권장되는데, 유효기간</description>
+    </item>
+    
+    <item>
+      <title>macOS에 pyenv 설치, 사용하기</title>
+      <link>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</link>
+      <pubDate>Tue, 08 Mar 2022 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</guid>
+      <description>pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다. 테스트 환경 macOS Monterey iTerm2 ZSH pyenv 설치 brew install pyenv echo &amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile echo &amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 특정 버전의 python 설치 pyenv install &amp;lt;python-version&amp;gt; ex) pyenv install 3.8.12</description>
+    </item>
+    
+    <item>
+      <title>zsh-autosuggest와 zsh-syntax-highlighting 충돌 문제 해결</title>
+      <link>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</guid>
+      <description>zsh-autosuggestions와 zsh-syntax-highlighting은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 ma</description>
+    </item>
+    
+    <item>
+      <title>[Golang] 구조체 필드를 배열처럼 접근하기</title>
+      <link>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</link>
+      <pubDate>Fri, 05 Apr 2019 02:25:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</guid>
+      <description>리플렉션 (reflect 패키지) 를 사용하면 구조체를 배열처럼 인덱스로 접근할 수 있습니다. import( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; &amp;#34;strconv&amp;#34; ) type test struct{ A int B int C string } 값 읽기 t := test{1,2,&amp;#34;3&amp;#34;} fmt.Println(reflect.ValueOf(t).Field(0).Int()) fmt.Println(reflect.ValueOf(t).Field(1).Int()) fmt.Println(reflect.ValueOf(t).Field(2).String()) 결과 1 2 3 자료형이 일치</description>
+    </item>
+    
+    <item>
+      <title>Python3 CLI 스크립트에서 표 그리기</title>
+      <link>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</link>
+      <pubDate>Wed, 19 Sep 2018 00:45:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</guid>
+      <description>데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다. 한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두</description>
+    </item>
+    
+    <item>
+      <title>Golang HTML 파서 사용하기</title>
+      <link>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</link>
+      <pubDate>Sat, 15 Sep 2018 02:20:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</guid>
+      <description>Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일이 가끔 있었습니다. golang.org/x/net/html 파서는 Python의 BeautifulSoup처럼 사용하기 편하게</description>
+    </item>
+    
+    <item>
+      <title>scanf()의 format string에 줄바꿈을 사용하면 안 되는 이유</title>
+      <link>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</link>
+      <pubDate>Wed, 12 Sep 2018 12:18:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</guid>
+      <description>#include &amp;lt;stdio.h&amp;gt; int main(){ int i=0; scanf(&amp;#34;%d\n&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); scanf(&amp;#34;%d&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); return 0; } scanf는 문자가 매칭이 안 되고 다음 문자가 whitespace가 아닐 때 까지 읽고 문자열이 남을 경우 나머지를 버퍼에 남긴다.</description>
+    </item>
+    
+    <item>
+      <title>Github pages 첫번째 포스트</title>
+      <link>https://blog.dfkdream.dev/2018/09/10/first-post/</link>
+      <pubDate>Mon, 10 Sep 2018 08:26:28 -0400</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/10/first-post/</guid>
+      <description>뭐하지??</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>

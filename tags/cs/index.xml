@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CS on dfkdream&#39;s blog</title>
+    <link>https://blog.dfkdream.dev/tags/cs/</link>
+    <description>Recent content in CS on dfkdream&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Apr 2019 02:25:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Golang] 구조체 필드를 배열처럼 접근하기</title>
+      <link>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</link>
+      <pubDate>Fri, 05 Apr 2019 02:25:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</guid>
+      <description>리플렉션 (reflect 패키지) 를 사용하면 구조체를 배열처럼 인덱스로 접근할 수 있습니다. import( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; &amp;#34;strconv&amp;#34; ) type test struct{ A int B int C string } 값 읽기 t := test{1,2,&amp;#34;3&amp;#34;} fmt.Println(reflect.ValueOf(t).Field(0).Int()) fmt.Println(reflect.ValueOf(t).Field(1).Int()) fmt.Println(reflect.ValueOf(t).Field(2).String()) 결과 1 2 3 자료형이 일치</description>
+    </item>
+    
+    <item>
+      <title>Python3 CLI 스크립트에서 표 그리기</title>
+      <link>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</link>
+      <pubDate>Wed, 19 Sep 2018 00:45:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</guid>
+      <description>데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다. 한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두</description>
+    </item>
+    
+    <item>
+      <title>Golang HTML 파서 사용하기</title>
+      <link>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</link>
+      <pubDate>Sat, 15 Sep 2018 02:20:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</guid>
+      <description>Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일이 가끔 있었습니다. golang.org/x/net/html 파서는 Python의 BeautifulSoup처럼 사용하기 편하게</description>
+    </item>
+    
+    <item>
+      <title>scanf()의 format string에 줄바꿈을 사용하면 안 되는 이유</title>
+      <link>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</link>
+      <pubDate>Wed, 12 Sep 2018 12:18:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</guid>
+      <description>#include &amp;lt;stdio.h&amp;gt; int main(){ int i=0; scanf(&amp;#34;%d\n&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); scanf(&amp;#34;%d&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); return 0; } scanf는 문자가 매칭이 안 되고 다음 문자가 whitespace가 아닐 때 까지 읽고 문자열이 남을 경우 나머지를 버퍼에 남긴다.</description>
+    </item>
+    
+  </channel>
+</rss>
