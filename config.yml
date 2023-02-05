@@ -10,7 +10,7 @@ buildExpired: false
 
 hasCJKLanguage: true
 
-googleAnalytics: UA-55757162-2
+googleAnalytics: G-GMSSDPMXZE
 
 minify:
   disableXML: true
