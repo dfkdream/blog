@@ -1,0 +1,121 @@
+baseURL: "https://blog.dfkdream.dev"
+title: dfkdream's blog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+hasCJKLanguage: true
+
+googleAnalytics: UA-55757162-2
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+permalinks:
+  posts: /:2006/:01/:02/:filename
+
+params:
+  env: production
+  title: dfkdream's blog
+  description: "공부한 내용 정리"
+  keywords: [Blog, Portfolio]
+  author: dfkdream
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+
+  label:
+    text: "dfkdream's blog"
+
+  # home-info mode
+  homeInfoParams:
+    Title: "dfkdream's blog"
+    Content: 공부한 내용 정리
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/dfkdream"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XwrsDxNNW1dGpEQAJ4cr5u3icxvUZJONnbKoYaOjtLI"
+    naver:
+      SiteVerificationTag: "f7672890d940101a2350722c42da5b75da998e2f"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: archive
+      name: archive
+      url: /archives/
+      weight: 5
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: search 
+      url: /search/
+      weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
