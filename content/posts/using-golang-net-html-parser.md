@@ -21,6 +21,41 @@ Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일
 </ul>
 ~~~
 
+## HTML 노드 렌더링 (renderNode)
+### Code
+아래 예시 소스코드들에서 사용되는 함수입니다. [stackoverflow](https://stackoverflow.com/questions/30109061/)를 참고했습니다. 
+~~~go
+func renderNode(n *html.Node) string {
+	var buf bytes.Buffer
+	w := io.Writer(&buf)
+	html.Render(w, n)
+	return buf.String()
+}
+~~~
+### 결과
+~~~
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li><a href="http://www.example.com">Item 3</a></li>
+</ul>
+~~~
+
+## 하위 노드 전체 렌더링하기
+### Code
+~~~go
+var result ="" 
+for d := n.FirstChild; d != nil; d = d.NextSibling {
+	result += renderNode(d)
+}
+~~~
+### 결과
+~~~
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li><a href="http://www.example.com">Item 3</a></li>
+~~~
+
 ## 자식 노드 전체 탐색
 HTML 파싱에는 일반적으로 이 코드를 사용합니다. 자식 노드 전체를 재귀적으로 탐색합니다.
 ### Code
@@ -65,7 +100,7 @@ Item 1
 Item 2
 a
 ~~~
-`Item 1`과 `Item 2`의 경우 해당 텍스트 노드가 `<li>` 태그의 첫 번째 자식 노드(FirstChild)이기 때문에 정상적으로 출력될 수 있었습니다. 그렇지만 `Item 3`의 경우 `<li>` 태그의 첫 번째 자식 노드가 텍스트 노드가 아닌 `<a>` 태그이기 때문에 `Item 3`가 아닌 `a`가 출력이 되었습니다. 이러한 경우를 방지하기 위해 저는 n.FirstChild.Data 대신 아래에 나오는 `renderNode` 함수를 사용합니다.
+`Item 1`과 `Item 2`의 경우 해당 텍스트 노드가 `<li>` 태그의 첫 번째 자식 노드(FirstChild)이기 때문에 정상적으로 출력될 수 있었습니다. 그렇지만 `Item 3`의 경우 `<li>` 태그의 첫 번째 자식 노드가 텍스트 노드가 아닌 `<a>` 태그이기 때문에 `Item 3`가 아닌 `a`가 출력이 되었습니다. 이러한 경우를 방지하기 위해 n.FirstChild.Data 대신 [`renderNode`](#html-노드-렌더링-rendernode) 함수를 사용합니다.
 ### Code (renderNode 함수 사용)
 ~~~go
 var f func(*html.Node)
@@ -86,41 +121,6 @@ Item 2
 <a href="http://www.example.com">Item 3</a>
 ~~~
 다만, renderNode를 사용할 경우 파싱 결과에 HTML이 포함됩니다. 파싱 결과에 HTML이 포함되어도 되는 경우에만 사용할 수 있겠습니다.
-
-## HTML 노드 렌더링
-### Code
-[stackoverflow](https://stackoverflow.com/questions/30109061/)를 참고했습니다.
-~~~go
-func renderNode(n *html.Node) string {
-	var buf bytes.Buffer
-	w := io.Writer(&buf)
-	html.Render(w, n)
-	return buf.String()
-}
-~~~
-### 결과
-~~~
-<ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li><a href="http://www.example.com">Item 3</a></li>
-</ul>
-~~~
-
-## 하위 노드 전체 렌더링하기
-### Code
-~~~go
-var result ="" 
-for d := n.FirstChild; d != nil; d = d.NextSibling {
-	result += renderNode(d)
-}
-~~~
-### 결과
-~~~
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li><a href="http://www.example.com">Item 3</a></li>
-~~~
 
 ## Attribute 값 읽기
 ### Code
@@ -145,3 +145,10 @@ http://www.example.com
 ***
 
 `net/html` 파서를 사용하기 불편하다면 [goquery](https://github.com/PuerkitoBio/goquery) 등의 다른 라이브러리를 사용하는 것도 좋겠습니다.
+
+***
+
+### 변경 기록
+
+2023-02-09
+* renderNode 함수의 위치를 문서 최상위로 변경했습니다. 의견 주신 [@mingkyme](https://github.com/mingkyme) 님 감사합니다.

@@ -16,3 +16,4 @@ Rakefile
 package.json
 node_modules
 npm-debug.log*
+.hugo_build.lock

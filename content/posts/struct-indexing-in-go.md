@@ -113,7 +113,7 @@ panic: reflect: call of reflect.Value.SetInt on string Value
 var t test
 
 a:=[]int{1,2,3}
-로
+
 for i,n:=range a{
     if reflect.ValueOf(t).Field(i).Kind()==reflect.String{
         reflect.ValueOf(&t).Elem().Field(i).SetString(strconv.Itoa(n))
