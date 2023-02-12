@@ -5,6 +5,9 @@
     <loc>https://blog.dfkdream.dev/tags/blog/</loc>
     <lastmod>2023-02-13T01:06:00+09:00</lastmod>
   </url><url>
+    <loc>https://blog.dfkdream.dev/categories/</loc>
+    <lastmod>2023-02-13T01:06:00+09:00</lastmod>
+  </url><url>
     <loc>https://blog.dfkdream.dev/</loc>
     <lastmod>2023-02-13T01:06:00+09:00</lastmod>
   </url><url>
@@ -18,6 +21,9 @@
     <lastmod>2023-02-13T01:06:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/tags/</loc>
+    <lastmod>2023-02-13T01:06:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A0%A8/</loc>
     <lastmod>2023-02-13T01:06:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/tags/environment/</loc>
@@ -78,8 +84,6 @@
     <lastmod>2018-09-10T08:26:28-04:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/archives/</loc>
-  </url><url>
-    <loc>https://blog.dfkdream.dev/categories/</loc>
   </url><url>
     <loc>https://blog.dfkdream.dev/search/</loc>
   </url>
