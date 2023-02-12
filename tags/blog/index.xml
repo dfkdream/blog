@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>blog on dfkdream&#39;s blog</title>
+    <link>https://blog.dfkdream.dev/tags/blog/</link>
+    <description>Recent content in blog on dfkdream&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Feb 2023 01:06:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jekyll 블로그 Hugo로 이전한 후기</title>
+      <link>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</link>
+      <pubDate>Mon, 13 Feb 2023 01:06:00 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</guid>
+      <description>Jekyll + Minimal Mistakes로 만들었던 블로그를 Hugo로 이전했습니다. 왜 Hugo인가? 가장 큰 이유는, Ruby보다는 Hugo가 사용하는 언어인 Go에 경</description>
+    </item>
+    
+  </channel>
+</rss>
