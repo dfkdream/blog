@@ -48,14 +48,14 @@ hasCJKLanguage: true
 
 # fuse 검색을 위해 JSON 인덱스 생성
 outputs:
-	home:
-		- HTML
-		- RSS
-		- JSON
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 # SEO를 위해 Jekyll과 동일하게 permalink 생성
 permalinks:
-	posts: /:2006/:01/:02/:filename
+  posts: /:2006/:01/:02/:filename
 ```
 ## 3. Github Actions 설정
 [Hugo 문서](https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action)를 참고해 `.github/workflows/gh-pages.yml` 파일을 작성했습니다. 주의할 점은 `on` 설정과 `Deploy` step의 `if`에 브랜치 이름이 `main`으로 하드코딩되어 있다는 점입니다. 제 블로그는 `master`브랜치를 사용하기 때문에, 문서에 있는 파일을 그대로 사용했을 때 제대로 빌드되지 않는 문제가 발생했습니다.
