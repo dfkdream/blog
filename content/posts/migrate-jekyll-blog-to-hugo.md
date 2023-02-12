@@ -2,6 +2,7 @@
 title: "Jekyll 블로그 Hugo로 이전한 후기"
 date: 2023-02-13 01:06:00 +0900
 tags: ["blog", "hugo"]
+categories: ["블로그 관련"]
 comments: true
 ---
 
