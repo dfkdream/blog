@@ -10,6 +10,9 @@ buildExpired: false
 
 hasCJKLanguage: true
 
+ignoreFiles:
+  - templates
+
 googleAnalytics: G-GMSSDPMXZE
 
 minify:
