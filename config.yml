@@ -35,7 +35,7 @@ params:
   description: "공부한 내용 정리"
   keywords: [Blog, Portfolio]
   author: dfkdream
-  DateFormat: "January 2, 2006"
+  DateFormat: "2006년 January 2일 "
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
