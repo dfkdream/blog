@@ -25,11 +25,11 @@ Obsidian 자체도 [markdown link로 변환 기능](https://help.obsidian.md/Lin
 #### Link To File
 * WikiLink
 ```
-[[filename.ext|alt]]
+[[file name.ext|alt]]
 ```
 * Markdown
 ```
-[alt](filename.ext)
+[alt](file-name.ext)
 ```
 * 기본 변환 기능 작동 여부: N
 
@@ -47,18 +47,18 @@ Obsidian 자체도 [markdown link로 변환 기능](https://help.obsidian.md/Lin
 #### Link To Heading in a note
 * WikiLink
 ~~~
-[[filename.ext#heading name|alt]]
+[[file name.ext#heading name|alt]]
 ~~~
 * Markdown
 ~~~ 
-[filename.ext#heading-name](alt)
+[alt](file-name.ext#heading-name)
 ~~~
 * 기본 변환 기능 작동 여부: N
 
 #### Link To Block in a note
 * WikiLink
 ~~~
-[[filename.ext#^uid]]
+[[file name.ext#^uid|alt]]
 ~~~
 * Markdown: 지원하지 않음
 * 기본 변환 기능 작동 여부: N
