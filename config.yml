@@ -8,6 +8,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+defaultContentLanguage: ko
 hasCJKLanguage: true
 
 ignoreFiles:
