@@ -40,7 +40,7 @@ Obsidian 자체도 [markdown link로 변환 기능](https://help.obsidian.md/Lin
 ~~~
 * Markdown
 ~~~ 
-![alt](Pasted_image_20230213014815)
+![alt](filename.ext)
 ~~~
 * 기본 변환 기능 작동 여부: N
 
