@@ -6,6 +6,8 @@ categories: ["프로젝트 (진행 중)"]
 comments: true
 ---
 
+프로젝트 링크: [https://github.com/dfkdream/obsidian_to_hugo](https://github.com/dfkdream/obsidian_to_hugo)
+
 # 개요
 Obsidian은 내부 링크에 WikiLink 문법을 사용하는데, Hugo가 사용하는 Markdown 문법과 호환되지 않는다. Obsidian으로 작성된 문서를 바로 Hugo에 배포하고 싶어 이 프로젝트를 기획하게 되었다.
 
@@ -69,6 +71,6 @@ Obsidian 자체도 [markdown link로 변환 기능](https://help.obsidian.md/Lin
 * Markdown: [[#Link To File]]과 동일
 
 # 구현 계획
-1. Filename - Permalink 키 페어 생성기 구현
-2. Wikilink, Markdown 파서 구현
+1. [X] Filename - Permalink Key-Value 페어 생성기 구현
+2. [ ] Wikilink, Markdown 파서 구현
 3. TBD
