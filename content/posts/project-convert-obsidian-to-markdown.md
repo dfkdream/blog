@@ -1,9 +1,15 @@
 ---
-title: "[프로젝트] Obsidian으로 작성된 문서 Markdown으로 변환하기"
+title: "[중단 프로젝트] Obsidian으로 작성된 문서 Markdown으로 변환하기"
 date: 2023-02-16 15:00:00 +0900
 tags: ["blog", "hugo"]
-categories: ["프로젝트 (진행 중)"]
+categories: ["중단 프로젝트"]
 comments: true
+---
+
+Update: 2023.05.11
+
+외부 프로그램 없이 WikiLink를 변환해 주고 역링크도 추출해 주는 프로젝트인 [hugo-wikilinks](https://github.com/milafrerichs/hugo-wikilinks)를 발견해 중단함. 잘 작동되면 문서 그래프 기능은 따로 구현해볼 수도 있을 것 같음.
+
 ---
 
 프로젝트 링크: [https://github.com/dfkdream/obsidian_to_hugo](https://github.com/dfkdream/obsidian_to_hugo)
@@ -72,5 +78,7 @@ Obsidian 자체도 [markdown link로 변환 기능](https://help.obsidian.md/Lin
 
 # 구현 계획
 1. [X] Filename - Permalink Key-Value 페어 생성기 구현
-2. [ ] Wikilink, Markdown 파서 구현
-3. TBD
+2. [x] Wikilink, Markdown 파서 구현
+3. [ ] 워크스페이스 컨버터 구현
+4. [ ] Github Actions 구현
+5. TBD?
