@@ -5,7 +5,17 @@
     <link>https://blog.dfkdream.dev/posts/</link>
     <description>Recent content in Posts on dfkdream&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Feb 2023 15:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko</language>
+    <lastBuildDate>Fri, 11 Aug 2023 00:08:34 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스에서 마우스 버튼 리매핑하기</title>
+      <link>https://blog.dfkdream.dev/2023/08/11/remapping-mouse-buttons-in-linux/</link>
+      <pubDate>Fri, 11 Aug 2023 00:08:34 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2023/08/11/remapping-mouse-buttons-in-linux/</guid>
+      <description>얼마 전에 MS Sculpt Ergonomic 마우스를 구입했고, 정말 잘 사용하고 있습니다. 하지만 이 마우스는 특이하게 앞으로 가기 버튼이 없고 Windows 키가 기본으로 할당되어 있습니다. 리눅스에</description>
+    </item>
+    
     <item>
       <title>[중단 프로젝트] Obsidian으로 작성된 문서 Markdown으로 변환하기</title>
       <link>https://blog.dfkdream.dev/2023/02/16/project-convert-obsidian-to-markdown/</link>

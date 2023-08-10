@@ -5,6 +5,7 @@
     <link>https://blog.dfkdream.dev/tags/cs/</link>
     <description>Recent content in CS on dfkdream&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
     <lastBuildDate>Fri, 05 Apr 2019 02:25:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Golang] 구조체 필드를 배열처럼 접근하기</title>
