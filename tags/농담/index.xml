@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>농담 on dfkdream&#39;s blog</title>
+    <link>https://blog.dfkdream.dev/tags/%EB%86%8D%EB%8B%B4/</link>
+    <description>Recent content in 농담 on dfkdream&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 16 Aug 2023 02:08:36 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/%EB%86%8D%EB%8B%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>객체 지향 토스터</title>
+      <link>https://blog.dfkdream.dev/2023/08/16/object-oriented-toaster/</link>
+      <pubDate>Wed, 16 Aug 2023 02:08:36 +0900</pubDate>
+      
+      <guid>https://blog.dfkdream.dev/2023/08/16/object-oriented-toaster/</guid>
+      <description>옛날 옛적, 여기서 멀지 않은 왕국에서 왕은 두 명의 보좌관을 시험하기로 했다. 왕은 두 개의 기다란 구멍이 위에 나 있고, 조절 노브와 레버가 달린 반짝이는 금속 상자를 보</description>
+    </item>
+    
+  </channel>
+</rss>

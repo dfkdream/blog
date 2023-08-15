@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.dfkdream.dev/</loc>
-    <lastmod>2023-08-11T00:08:34+09:00</lastmod>
+    <loc>https://blog.dfkdream.dev/categories/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
   </url><url>
-    <loc>https://blog.dfkdream.dev/tags/linux/</loc>
-    <lastmod>2023-08-11T00:08:34+09:00</lastmod>
+    <loc>https://blog.dfkdream.dev/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/tags/oop/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/posts/</loc>
-    <lastmod>2023-08-11T00:08:34+09:00</lastmod>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/tags/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/2023/08/16/object-oriented-toaster/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/tags/%EB%86%8D%EB%8B%B4/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/tags/%EB%B2%88%EC%97%AD/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/categories/%EB%B2%88%EC%97%AD/</loc>
+    <lastmod>2023-08-16T02:08:36+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.dfkdream.dev/tags/linux/</loc>
     <lastmod>2023-08-11T00:08:34+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/2023/08/11/remapping-mouse-buttons-in-linux/</loc>
@@ -21,9 +39,6 @@
     <lastmod>2023-02-16T15:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/tags/blog/</loc>
-    <lastmod>2023-02-16T15:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.dfkdream.dev/categories/</loc>
     <lastmod>2023-02-16T15:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.dfkdream.dev/tags/hugo/</loc>
