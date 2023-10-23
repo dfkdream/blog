@@ -111,7 +111,7 @@ int default_wake_function(wait_queue_entry_t *curr, unsigned mode, int wake_flag
 ## add_wait_queue
 이렇게 만들어진 `wait_queue_entry`를 파일 기술자의 대기 큐에 삽입한 다음, 태스크는 `while(1)` 루프에 진입한다. 이 루프 안에서 태스크는 `wait_woken`을 호출해 이벤트가 발생할 때까지 대기 상태에 들어간다.
 ## 인터럽트 발생
-인터럽트가 발생되면 가장 먼저 `woken_wake_function`이 실행되고, 깨어난 태스크 `get_one_event` 함수를 통해 이벤트를 가져오려고 시도한다. 이벤트를 가져오는 데 성공한 경우, 가져온 이벤트를 사용자 메모리에 복사하고 `remove_wait_queue`를 사용해 대기열에서 자신의 `wait_queue_entry`를 삭제해 대기를 종료한다. 만약 이벤트를 가져오지 못했다면 `wait_woken` 함수를 실행해 다시 대기 상태에 들어간다.
+인터럽트가 발생되면 가장 먼저 `woken_wake_function`이 실행되고, 깨어난 태스크는 `get_one_event` 함수를 통해 이벤트를 가져오려고 시도한다. 이벤트를 가져오는 데 성공한 경우, 가져온 이벤트를 사용자 메모리에 복사하고 `remove_wait_queue`를 사용해 대기열에서 자신의 `wait_queue_entry`를 삭제해 대기를 종료한다. 만약 이벤트를 가져오지 못했다면 `wait_woken` 함수를 실행해 다시 대기 상태에 들어간다.
 
 ## wait_woken
 출처: [https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c](https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c)
