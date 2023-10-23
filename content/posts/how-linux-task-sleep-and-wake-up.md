@@ -83,7 +83,7 @@ static ssize_t inotify_read(struct file *file, char __user *buf,
 		.entry		= LIST_HEAD_INIT((name).entry),			\
 	}
 ```
-`DEFINE_WAIT_FUNC` 매크로는 대기열 (wait_queue) 안에 들어갈 `wait_queue_entry` 구조체를 선언하고 있다. 이 매크로는 `private`, `func`, `entry` 세 개의 필드를 초기화한다. `private` 필드에는 현재 태스크의 `task_struct`가, `func` 필드에는 깨어난 직후 실행할 함수가 (이 경우에는 `woken_wake_func`), `entry`에는 [이중 연결 리스트 구조체](linked-list-of-linux-kernel.md)가 들어간다.
+`DEFINE_WAIT_FUNC` 매크로는 대기열 (wait_queue) 안에 들어갈 `wait_queue_entry` 구조체를 선언하고 있다. 이 매크로는 `private`, `func`, `entry` 세 개의 필드를 초기화한다. `private` 필드에는 현재 태스크의 `task_struct`가, `func` 필드에는 깨어난 직후 실행할 함수가 (이 경우에는 `woken_wake_func`), `entry`에는 [이중 연결 리스트 구조체](/2023/10/18/linked-list-of-linux-kernel/)가 들어간다.
 
 ## woken_wake_func
 출처: [https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c](https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c)
