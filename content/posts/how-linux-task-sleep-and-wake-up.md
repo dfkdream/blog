@@ -110,8 +110,8 @@ int default_wake_function(wait_queue_entry_t *curr, unsigned mode, int wake_flag
 `default_wake_function`은 `try_to_wake_up`을 실행시키고, 이 함수는 `ttwu` 함수들을 호출해 태스크를 이전에 실행되던 프로세서의 runqueue에 다시 삽입한다. 
 ## add_wait_queue
 이렇게 만들어진 `wait_queue_entry`를 파일 기술자의 대기 큐에 삽입한 다음, 태스크는 `while(1)` 루프에 진입한다. 이 루프 안에서 태스크는 `wait_woken`을 호출해 이벤트가 발생할 때까지 대기 상태에 들어간다.
-## 인터럽트 발생
-인터럽트가 발생되면 가장 먼저 `woken_wake_function`이 실행되고, 깨어난 태스크는 `get_one_event` 함수를 통해 이벤트를 가져오려고 시도한다. 이벤트를 가져오는 데 성공한 경우, 가져온 이벤트를 사용자 메모리에 복사하고 `remove_wait_queue`를 사용해 대기열에서 자신의 `wait_queue_entry`를 삭제해 대기를 종료한다. 만약 이벤트를 가져오지 못했다면 `wait_woken` 함수를 실행해 다시 대기 상태에 들어간다.
+## 이벤트 발생
+이벤트가 발생되면 가장 먼저 `woken_wake_function`이 실행되고, 깨어난 태스크는 `get_one_event` 함수를 통해 이벤트를 가져오려고 시도한다. 이벤트를 가져오는 데 성공한 경우, 가져온 이벤트를 사용자 메모리에 복사하고 `remove_wait_queue`를 사용해 대기열에서 자신의 `wait_queue_entry`를 삭제해 대기를 종료한다. 만약 이벤트를 가져오지 못했다면 `wait_woken` 함수를 실행해 다시 대기 상태에 들어간다.
 
 ## wait_woken
 출처: [https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c](https://github.com/torvalds/linux/blob/1acfd2bd3f0d9dc34ea1871a445c554220945d9f/kernel/sched/wait.c)
@@ -152,14 +152,14 @@ long wait_woken(struct wait_queue_entry *wq_entry, unsigned mode, long timeout)
 # 정리
 실행 과정을 다시 정리해 보면 다음과 같다.
 ```
-inotify_read -> add_wait_queue -> wait_woken -> woken_wake_func -> ttwu -> 실행 조건 검사 -> wait_woken / remove_wait_queue
+inotify_read -> add_wait_queue -> wait_woken -> woken_wake_func -> ttwu -> wait_woken -> 실행 조건 검사 -> wait_woken / remove_wait_queue
 ```
 
 이 과정에서 `WQ_FLAG_WOKEN` 비트의 변화는 다음과 같다.
 
-| call | inotify_read | add_wait_queue | wait_woken | woken_wake_func | inotify_read | remove_wait_queue |
-| ---- | ---- | ---- | ---- | ---- | ---- | --- |
-| WQ_FLAG_WOKEN | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| call | inotify_read | add_wait_queue | wait_woken | woken_wake_func | wait_woken | inotify_read | remove_wait_queue |
+| ---- | ---- | ---- | ---- | ---- | ---- | --- | --- |
+| WQ_FLAG_WOKEN | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0|
 
 # 실습
 ```c
