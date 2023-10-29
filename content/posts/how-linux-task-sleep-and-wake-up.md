@@ -141,11 +141,11 @@ long wait_woken(struct wait_queue_entry *wq_entry, unsigned mode, long timeout)
 }
 ```
 
-`wait_woken` 함수는 가장 먼저 `set_current_state` 함수가 실행하고, 현재 태스크의 상태를 `TASK_INTERRUPTIBLE` 또는 `TASK_UNINTERRUPTIBLE` 상태로 바꾸어 대기 상태로 들어가게 한다.
+`wait_woken` 함수는 가장 먼저 `set_current_state` 함수가 실행하고, 현재 태스크의 상태를 `TASK_INTERRUPTIBLE` 또는 `TASK_UNINTERRUPTIBLE` 상태로 바꾼다. 실제 대기는 `schedule_timeout` 호출 시 시작된다는 점에 주의하자.
 
-`!(wq_entry->flags & WQ_FLAG_WOKEN) && !kthread_should_stop_or_park()` 표현식은 태스크가 대기열 안에서 대기하고 있는 동안 다른 태스크의 호출로 인해 활성화되었을 경우 참이 된다. 이럴 경우 다른 태스크에게 프로세서를 양보하고 `timeout`만큼 다시 대기한다.
+`!(wq_entry->flags & WQ_FLAG_WOKEN)` 표현식은 태스크가 `wait_woken` 함수를 호출하기 전에 이벤트가 발생해 `woken_wake_func`이 실행되었을 때 참이 된다. 이 경우 태스크는 대기하지 않고 바로 이벤트를 처리해야 한다. 그렇지 않다면, `schedule_timeout`을 호출해 다른 태스크에게 프로세서를 양보하고 `timeout`만큼 대기한다.
 
-인터럽트에 의해 깨어났을 경우, `__set_current_state` 함수를 호출해 태스크의 상태를 `TASK_RUNNING`으로 변경한다. 함수명 앞의 `__`는 이 함수를 `smp_mb`로 보호받고 있는 안전한 환경에서만 실행해야 한다는 것을 의미한다.
+이벤트에 의해 깨어났을 경우, `__set_current_state` 함수를 호출해 태스크의 상태를 `TASK_RUNNING`으로 변경한다. 함수명 앞의 `__`는 이 함수를 `smp_mb`로 보호받고 있는 안전한 환경에서만 실행해야 한다는 것을 의미한다.
 
 그 후, `smp_store_mb`함수를 호출해 `wait_queue_entry`의 `WQ_FLAG_WOKEN`비트를 0으로 변경한다. 이렇게 태스크를 깨우는 프로세스가 끝나고, 실행된 태스크는 `while(1)` 루프 안에서 실행 조건을 검사해 처리를 계속할지, 아니면 다시 대기할지를 결정하게 된다.
 
@@ -159,7 +159,7 @@ inotify_read -> add_wait_queue -> wait_woken -> woken_wake_func -> ttwu -> wait_
 
 | call | inotify_read | add_wait_queue | wait_woken | woken_wake_func | wait_woken | inotify_read | remove_wait_queue |
 | ---- | ---- | ---- | ---- | ---- | ---- | --- | --- |
-| WQ_FLAG_WOKEN | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0|
+| WQ_FLAG_WOKEN | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0|
 
 # 실습
 ```c
