@@ -73,6 +73,8 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/dfkdream"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/dfkdream"
 
   analytics:
     google:
