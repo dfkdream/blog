@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "c2cccec6faf93264",
+    "type": "split",
+    "children": [
+      {
+        "id": "130848239cfda1d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4256c80a5b948be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "applying-hotwire-turbo-hugo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6273bc1c62b3d98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "templates/post.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8967d2601fed9559",
+    "type": "split",
+    "children": [
+      {
+        "id": "24df4a6a64b7f185",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b9058e8a1990dde",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3ec99b9d2bc4a2e2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "268800d09683dd79",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8afe12788c90e185",
+    "type": "split",
+    "children": [
+      {
+        "id": "43b4ff8e8d968eff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f286856d65d37016",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "applying-hotwire-turbo-hugo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "489b0b764d3a4d1a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "applying-hotwire-turbo-hugo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c19c132e345ad18b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "376b6c6117a802fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "applying-hotwire-turbo-hugo.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "c4256c80a5b948be",
+  "lastOpenFiles": [
+    "do-not-use-line-feed-in-scanf.md",
+    "applying-hotwire-turbo-hugo.md",
+    "templates/post.md"
+  ]
+}
