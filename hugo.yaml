@@ -102,6 +102,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: garden
+      name: garden
+      url: https://garden.dfkdream.dev
+      weight: 3
     - identifier: archive
       name: archive
       url: /archives/
