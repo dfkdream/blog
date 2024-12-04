@@ -4,125 +4,180 @@
     <title>Posts on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/posts/</link>
     <description>Recent content in Posts on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 23 Oct 2023 20:39:15 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 20:39:15 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>리눅스 태스크가 대기하고 깨어나는 방법</title>
       <link>https://blog.dfkdream.dev/2023/10/23/how-linux-task-sleep-and-wake-up/</link>
       <pubDate>Mon, 23 Oct 2023 20:39:15 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/10/23/how-linux-task-sleep-and-wake-up/</guid>
-      <description>태스크는 파일 처리 등 IO 작업을 요청한 다음 대기 상태에 들어가고, 처리가 완료되면 깨어나 남은 작업을 수행한다. 너무나 당연한 과정이라 인식하고 있지도 않았지만,</description>
+      <description>&lt;p&gt;태스크는 파일 처리 등 IO 작업을 요청한 다음 대기 상태에 들어가고, 처리가 완료되면 깨어나 남은 작업을 수행한다. 너무나 당연한 과정이라 인식하고 있지도 않았지만, 리눅스 커널은 이 작업을 여러 가지 단계들로 나누어 수행하고 있다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>리눅스 커널의 연결 리스트</title>
       <link>https://blog.dfkdream.dev/2023/10/18/linked-list-of-linux-kernel/</link>
       <pubDate>Wed, 18 Oct 2023 17:10:57 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/10/18/linked-list-of-linux-kernel/</guid>
-      <description>리눅스 커널에서는 태스크 목록 등을 관리하기 위해 이중 연결 리스트가 사용되는데, 이 이중 연결 리스트는 중복 코드를 최대한 줄이기 위해 독특한 형태로 구성되어 있다.</description>
+      <description>&lt;p&gt;리눅스 커널에서는 태스크 목록 등을 관리하기 위해 이중 연결 리스트가 사용되는데, 이 이중 연결 리스트는 중복 코드를 최대한 줄이기 위해 독특한 형태로 구성되어 있다.&lt;/p&gt;
+&lt;h1 id=&#34;일반적인-이중-연결-리스트&#34;&gt;일반적인 이중 연결 리스트&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list_head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;data_t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;payload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list_head&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이중 연결 리스트는 일반적으로 payload와 이전, 이후 노드를 가리키는 포인터들로 구성되어 있다. 이러한 구조체가 몇 개 밖에 없다면 큰 문제가 되지 않는다. 하지만 리눅스 커널처럼 복잡한 코드의 경우 여러 타입의 이중 연결 리스트가 매우 많이 필요하고 타입의 개수 만큼의 insert, delete, 순회 함수 등을 구현해야 한다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>객체 지향 토스터</title>
       <link>https://blog.dfkdream.dev/2023/08/16/object-oriented-toaster/</link>
       <pubDate>Wed, 16 Aug 2023 02:08:36 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/08/16/object-oriented-toaster/</guid>
-      <description>옛날 옛적, 여기서 멀지 않은 왕국에서 왕은 두 명의 보좌관을 시험하기로 했다. 왕은 두 개의 기다란 구멍이 위에 나 있고, 조절 노브와 레버가 달린 반짝이는 금속 상자를 보</description>
+      <description>&lt;p&gt;옛날 옛적, 여기서 멀지 않은 왕국에서 왕은 두 명의 보좌관을 시험하기로 했다. 왕은 두 개의 기다란 구멍이 위에 나 있고, 조절 노브와 레버가 달린 반짝이는 금속 상자를 보여주며 &amp;ldquo;이것이 무엇이라고 생각하는가?&amp;rdquo; 라고 물었다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>리눅스에서 마우스 버튼 리매핑하기</title>
       <link>https://blog.dfkdream.dev/2023/08/11/remapping-mouse-buttons-in-linux/</link>
       <pubDate>Fri, 11 Aug 2023 00:08:34 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/08/11/remapping-mouse-buttons-in-linux/</guid>
-      <description>얼마 전에 MS Sculpt Ergonomic 마우스를 구입했고, 정말 잘 사용하고 있습니다. 하지만 이 마우스는 특이하게 앞으로 가기 버튼이 없고 Windows 키가 기본으로 할당되어 있습니다. 리눅스에</description>
+      <description>&lt;p&gt;얼마 전에 MS Sculpt Ergonomic 마우스를 구입했고, 정말 잘 사용하고 있습니다. 하지만 이 마우스는 특이하게 앞으로 가기 버튼이 없고 Windows 키가 기본으로 할당되어 있습니다. 리눅스에서 이 키를 매핑할 수 있는 유틸리티가 제공되지 않아 다른 방법을 찾아 보았습니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Jekyll 블로그 Hugo로 이전한 후기</title>
       <link>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</link>
       <pubDate>Mon, 13 Feb 2023 01:06:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</guid>
-      <description>Jekyll + Minimal Mistakes로 만들었던 블로그를 Hugo로 이전했습니다. 왜 Hugo인가? 가장 큰 이유는, Ruby보다는 Hugo가 사용하는 언어인 Go에 경</description>
+      <description>&lt;p&gt;Jekyll + Minimal Mistakes로 만들었던 블로그를 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;로 이전했습니다.&lt;/p&gt;
+&lt;h1 id=&#34;왜-hugo인가&#34;&gt;왜 Hugo인가?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 큰 이유는, Ruby보다는 Hugo가 사용하는 언어인 Go에 경험이 많았기 때문입니다. 사실 이 점이 블로그 글 작성에 큰 영향을 미치지는 않습니다. 실제 사용시에는 Hugo cli 명령어 정도만 사용하니까요. 하지만 혹시 모를 문제 발생시에 해결하기 훨씬 수월할 것 같다는 안정감이 들었습니다.&lt;/li&gt;
+&lt;li&gt;Hugo를 사용한 정적 웹사이트 개발 프로젝트를 수행했던 경험이 있고, Hugo가 사용하는 템플릿 언어인 &lt;a href=&#34;https://pkg.go.dev/text/template&#34;&gt;text/template&lt;/a&gt; 을 자주 사용했습니다.&lt;/li&gt;
+&lt;li&gt;macOS에서 빌드 속도가 Jekyll에 비해 매우 빠릅니다. Linux에서는 비슷한 성능을 보여줬지만, macOS의 경우 Jekyll은 체감 빌드 시간이 1분 정도 걸리는 데 비해 Hugo는 대략 3초 이내로 빌드가 완료됩니다.&lt;/li&gt;
+&lt;li&gt;Hot Reload를 지원해 테마 개발이 편리합니다.&lt;/li&gt;
+&lt;li&gt;Google Analytics, 목차 생성 기능 등 기본 제공되는 기능들이 풍부합니다.&lt;/li&gt;
+&lt;li&gt;테마를 git submodule로 관리해 소스트리가 깔끔합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;단점은&#34;&gt;단점은?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Github pages에서 기본적으로 지원하지 않습니다. Jekyll의 경우, 별도 설정 없이 페이지 빌드와 배포가 자동으로 수행되는 반면, Hugo의 경우 Github Actions를 수동으로 설정해 주어야 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단점이 별로 없는 것 같지만, 위 단점이 생각보다 많이 컸습니다. 그래서 사실 Go를 많이 좋아하고, 경험이 있는 것이 아니라면 그냥 Jekyll을 사용하는 것이 나을지도 모르겠네요.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>만료된 GPG 키 갱신하기 (유효기간 연장)</title>
       <link>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</guid>
-      <description>Github 등 Git 서버에서는 커미터가 자신임을 증명하기 위해 GPG 서명을 사용할 수 있습니다. 이때 사용되는 GPG 키는 보안을 위해 유효기간을 지정하는 것이 권장되는데, 유효기간</description>
+      <description>&lt;p&gt;Github 등 Git 서버에서는 커미터가 자신임을 증명하기 위해 GPG 서명을 사용할 수 있습니다.
+이때 사용되는 GPG 키는 보안을 위해 유효기간을 지정하는 것이 권장되는데, 유효기간이 지나면 해당 키로 커밋을 할 수 없는 등 문제가 발생합니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>macOS에 pyenv 설치, 사용하기</title>
       <link>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</guid>
-      <description>pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다. 테스트 환경 macOS Monterey iTerm2 ZSH pyenv 설치 brew install pyenv echo &amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile echo &amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 특정 버전의 python 설치 pyenv install &amp;lt;python-version&amp;gt; ex) pyenv install 3.8.12</description>
+      <description>&lt;p&gt;pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다.&lt;/p&gt;
+&lt;h1 id=&#34;테스트-환경&#34;&gt;테스트 환경&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Monterey&lt;/li&gt;
+&lt;li&gt;iTerm2&lt;/li&gt;
+&lt;li&gt;ZSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;pyenv-설치&#34;&gt;pyenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zprofile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;특정-버전의-python-설치&#34;&gt;특정 버전의 python 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install &amp;lt;python-version&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install 3.8.12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;pyenv-virtualenv-설치&#34;&gt;pyenv-virtualenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv-virtualenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv virtualenv-init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;virtualenv-생성&#34;&gt;virtualenv 생성&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv virtualenv &amp;lt;python-version&amp;gt; &amp;lt;venv-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>zsh-autosuggest와 zsh-syntax-highlighting 충돌 문제 해결</title>
       <link>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</guid>
-      <description>zsh-autosuggestions와 zsh-syntax-highlighting은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 ma</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;와 &lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;&gt;zsh-syntax-highlighting&lt;/a&gt;은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 macOS에서 이 플러그인들을 설치했더니 플러그인 간에 충돌이 발생해 자동완성된 명령어가 보이지 않거나 하이라이팅이 제대로 되지 않는 문제가 발생했습니다. 이 포스트에서는 이런 문제들을 해결해 보겠습니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>[Golang] 구조체 필드를 배열처럼 접근하기</title>
       <link>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</link>
       <pubDate>Fri, 05 Apr 2019 02:25:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2019/04/05/struct-indexing-in-go/</guid>
-      <description>리플렉션 (reflect 패키지) 를 사용하면 구조체를 배열처럼 인덱스로 접근할 수 있습니다. import( &amp;#34;fmt&amp;#34; &amp;#34;reflect&amp;#34; &amp;#34;strconv&amp;#34; ) type test struct{ A int B int C string } 값 읽기 t := test{1,2,&amp;#34;3&amp;#34;} fmt.Println(reflect.ValueOf(t).Field(0).Int()) fmt.Println(reflect.ValueOf(t).Field(1).Int()) fmt.Println(reflect.ValueOf(t).Field(2).String()) 결과 1 2 3 자료형이 일치</description>
+      <description>&lt;p&gt;리플렉션 (reflect 패키지) 를 사용하면 구조체를 배열처럼 인덱스로 접근할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s&#34;&gt;&amp;#34;reflect&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s&#34;&gt;&amp;#34;strconv&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;struct&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;값-읽기&#34;&gt;값 읽기&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;reflect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;ValueOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Field&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;reflect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;ValueOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Field&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;reflect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;ValueOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Field&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;결과&#34;&gt;결과&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1
+2
+3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;자료형이 일치하지 않을 경우 패닉이 발생합니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Python3 CLI 스크립트에서 표 그리기</title>
       <link>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</link>
       <pubDate>Wed, 19 Sep 2018 00:45:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</guid>
-      <description>데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다. 한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두</description>
+      <description>&lt;p&gt;데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다.&lt;/p&gt;
+&lt;p&gt;한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두었습니다.
+다른 전각 문자를 사용하려면 &lt;code&gt;reKo&lt;/code&gt; 부분에 해당 문자 구간을 추가하면 됩니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Golang HTML 파서 사용하기</title>
       <link>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</link>
       <pubDate>Sat, 15 Sep 2018 02:20:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/15/using-golang-net-html-parser/</guid>
-      <description>Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일이 가끔 있었습니다. golang.org/x/net/html 파서는 Python의 BeautifulSoup처럼 사용하기 편하게</description>
+      <description>&lt;p&gt;Golang으로 애플리케이션 개발을 하면서 HTML 파서를 사용할 일이 가끔 있었습니다.
+&lt;code&gt;golang.org/x/net/html&lt;/code&gt; 파서는 Python의 &lt;code&gt;BeautifulSoup&lt;/code&gt;처럼 사용하기 편하게 구성되어 있지 않아 사용법을 간단히 정리해 보았습니다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>scanf()의 format string에 줄바꿈을 사용하면 안 되는 이유</title>
       <link>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</link>
       <pubDate>Wed, 12 Sep 2018 12:18:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/12/do-not-use-line-feed-in-scanf/</guid>
-      <description>#include &amp;lt;stdio.h&amp;gt; int main(){ int i=0; scanf(&amp;#34;%d\n&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); scanf(&amp;#34;%d&amp;#34;,&amp;amp;i); printf(&amp;#34;%d\n&amp;#34;,i); return 0; } scanf는 문자가 매칭이 안 되고 다음 문자가 whitespace가 아닐 때 까지 읽고 문자열이 남을 경우 나머지를 버퍼에 남긴다.</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;scanf&lt;/code&gt;는 문자가 매칭이 안 되고 다음 문자가 whitespace가 아닐 때 까지 읽고 문자열이 남을 경우 나머지를 버퍼에 남긴다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;scanf&lt;/code&gt;에 \n이 들어갈 경우 줄바꿈이 매칭되므로 &lt;code&gt;scanf&lt;/code&gt;가 종료되지 않고 다음 readable character가 들어올 때 까지 대기한다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Github pages 첫번째 포스트</title>
       <link>https://blog.dfkdream.dev/2018/09/10/first-post/</link>
       <pubDate>Mon, 10 Sep 2018 08:26:28 -0400</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/10/first-post/</guid>
-      <description>뭐하지??</description>
+      <description>&lt;p&gt;뭐하지??&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

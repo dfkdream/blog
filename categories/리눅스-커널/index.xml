@@ -4,26 +4,29 @@
     <title>리눅스 커널 on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/categories/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90/</link>
     <description>Recent content in 리눅스 커널 on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 23 Oct 2023 20:39:15 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/categories/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 20:39:15 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/categories/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%BB%A4%EB%84%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>리눅스 태스크가 대기하고 깨어나는 방법</title>
       <link>https://blog.dfkdream.dev/2023/10/23/how-linux-task-sleep-and-wake-up/</link>
       <pubDate>Mon, 23 Oct 2023 20:39:15 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/10/23/how-linux-task-sleep-and-wake-up/</guid>
-      <description>태스크는 파일 처리 등 IO 작업을 요청한 다음 대기 상태에 들어가고, 처리가 완료되면 깨어나 남은 작업을 수행한다. 너무나 당연한 과정이라 인식하고 있지도 않았지만,</description>
+      <description>&lt;p&gt;태스크는 파일 처리 등 IO 작업을 요청한 다음 대기 상태에 들어가고, 처리가 완료되면 깨어나 남은 작업을 수행한다. 너무나 당연한 과정이라 인식하고 있지도 않았지만, 리눅스 커널은 이 작업을 여러 가지 단계들로 나누어 수행하고 있다.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>리눅스 커널의 연결 리스트</title>
       <link>https://blog.dfkdream.dev/2023/10/18/linked-list-of-linux-kernel/</link>
       <pubDate>Wed, 18 Oct 2023 17:10:57 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/10/18/linked-list-of-linux-kernel/</guid>
-      <description>리눅스 커널에서는 태스크 목록 등을 관리하기 위해 이중 연결 리스트가 사용되는데, 이 이중 연결 리스트는 중복 코드를 최대한 줄이기 위해 독특한 형태로 구성되어 있다.</description>
+      <description>&lt;p&gt;리눅스 커널에서는 태스크 목록 등을 관리하기 위해 이중 연결 리스트가 사용되는데, 이 이중 연결 리스트는 중복 코드를 최대한 줄이기 위해 독특한 형태로 구성되어 있다.&lt;/p&gt;
+&lt;h1 id=&#34;일반적인-이중-연결-리스트&#34;&gt;일반적인 이중 연결 리스트&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list_head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;data_t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;payload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list_head&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이중 연결 리스트는 일반적으로 payload와 이전, 이후 노드를 가리키는 포인터들로 구성되어 있다. 이러한 구조체가 몇 개 밖에 없다면 큰 문제가 되지 않는다. 하지만 리눅스 커널처럼 복잡한 코드의 경우 여러 타입의 이중 연결 리스트가 매우 많이 필요하고 타입의 개수 만큼의 insert, delete, 순회 함수 등을 구현해야 한다.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

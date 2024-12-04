@@ -4,17 +4,16 @@
     <title>ZSH on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/tags/zsh/</link>
     <description>Recent content in ZSH on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>zsh-autosuggest와 zsh-syntax-highlighting 충돌 문제 해결</title>
       <link>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</guid>
-      <description>zsh-autosuggestions와 zsh-syntax-highlighting은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 ma</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;와 &lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;&gt;zsh-syntax-highlighting&lt;/a&gt;은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 macOS에서 이 플러그인들을 설치했더니 플러그인 간에 충돌이 발생해 자동완성된 명령어가 보이지 않거나 하이라이팅이 제대로 되지 않는 문제가 발생했습니다. 이 포스트에서는 이런 문제들을 해결해 보겠습니다.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

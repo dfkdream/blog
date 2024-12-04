@@ -4,17 +4,17 @@
     <title>Git on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/tags/git/</link>
     <description>Recent content in Git on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Mar 2022 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>만료된 GPG 키 갱신하기 (유효기간 연장)</title>
       <link>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2022/03/30/renewing-expired-gpg-key/</guid>
-      <description>Github 등 Git 서버에서는 커미터가 자신임을 증명하기 위해 GPG 서명을 사용할 수 있습니다. 이때 사용되는 GPG 키는 보안을 위해 유효기간을 지정하는 것이 권장되는데, 유효기간</description>
+      <description>&lt;p&gt;Github 등 Git 서버에서는 커미터가 자신임을 증명하기 위해 GPG 서명을 사용할 수 있습니다.
+이때 사용되는 GPG 키는 보안을 위해 유효기간을 지정하는 것이 권장되는데, 유효기간이 지나면 해당 키로 커밋을 할 수 없는 등 문제가 발생합니다.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,26 +4,46 @@
     <title>MacOS on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/tags/macos/</link>
     <description>Recent content in MacOS on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>macOS에 pyenv 설치, 사용하기</title>
       <link>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</guid>
-      <description>pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다. 테스트 환경 macOS Monterey iTerm2 ZSH pyenv 설치 brew install pyenv echo &amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile echo &amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 특정 버전의 python 설치 pyenv install &amp;lt;python-version&amp;gt; ex) pyenv install 3.8.12</description>
+      <description>&lt;p&gt;pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다.&lt;/p&gt;
+&lt;h1 id=&#34;테스트-환경&#34;&gt;테스트 환경&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Monterey&lt;/li&gt;
+&lt;li&gt;iTerm2&lt;/li&gt;
+&lt;li&gt;ZSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;pyenv-설치&#34;&gt;pyenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zprofile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;특정-버전의-python-설치&#34;&gt;특정 버전의 python 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install &amp;lt;python-version&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install 3.8.12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;pyenv-virtualenv-설치&#34;&gt;pyenv-virtualenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv-virtualenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv virtualenv-init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;virtualenv-생성&#34;&gt;virtualenv 생성&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv virtualenv &amp;lt;python-version&amp;gt; &amp;lt;venv-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>zsh-autosuggest와 zsh-syntax-highlighting 충돌 문제 해결</title>
       <link>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2020/02/21/zsh-autosuggest-with-highlight/</guid>
-      <description>zsh-autosuggestions와 zsh-syntax-highlighting은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 ma</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;와 &lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;&gt;zsh-syntax-highlighting&lt;/a&gt;은 zsh 사용을 엄청 편리하게 해 주는 플러그인입니다. 그런데 macOS에서 이 플러그인들을 설치했더니 플러그인 간에 충돌이 발생해 자동완성된 명령어가 보이지 않거나 하이라이팅이 제대로 되지 않는 문제가 발생했습니다. 이 포스트에서는 이런 문제들을 해결해 보겠습니다.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

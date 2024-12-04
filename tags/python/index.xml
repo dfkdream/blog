@@ -4,26 +4,48 @@
     <title>Python on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/tags/python/</link>
     <description>Recent content in Python on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>macOS에 pyenv 설치, 사용하기</title>
       <link>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2022/03/08/installing-and-using-pyenv-macos/</guid>
-      <description>pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다. 테스트 환경 macOS Monterey iTerm2 ZSH pyenv 설치 brew install pyenv echo &amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zprofile echo &amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc 특정 버전의 python 설치 pyenv install &amp;lt;python-version&amp;gt; ex) pyenv install 3.8.12</description>
+      <description>&lt;p&gt;pyenv, pyenv-virtualenv 설치 방법과 자주 사용되는 명령어들을 모아 보았습니다.&lt;/p&gt;
+&lt;h1 id=&#34;테스트-환경&#34;&gt;테스트 환경&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Monterey&lt;/li&gt;
+&lt;li&gt;iTerm2&lt;/li&gt;
+&lt;li&gt;ZSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;pyenv-설치&#34;&gt;pyenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init --path)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zprofile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;특정-버전의-python-설치&#34;&gt;특정 버전의 python 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install &amp;lt;python-version&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install 3.8.12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;pyenv-virtualenv-설치&#34;&gt;pyenv-virtualenv 설치&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pyenv-virtualenv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv virtualenv-init -)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;virtualenv-생성&#34;&gt;virtualenv 생성&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv virtualenv &amp;lt;python-version&amp;gt; &amp;lt;venv-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ex)&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Python3 CLI 스크립트에서 표 그리기</title>
       <link>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</link>
       <pubDate>Wed, 19 Sep 2018 00:45:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/19/draw-table-in-python/</guid>
-      <description>데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다. 한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두</description>
+      <description>&lt;p&gt;데이터와 행 이름을 리스트로 넣으면 표를 출력해 주는 함수입니다.&lt;/p&gt;
+&lt;p&gt;한글을 포맷팅하면 전각 한글을 한 글자로 계산해 표가 제대로 출력되지 않는데, 해당 문제를 해결해 두었습니다.
+다른 전각 문자를 사용하려면 &lt;code&gt;reKo&lt;/code&gt; 부분에 해당 문자 구간을 추가하면 됩니다.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

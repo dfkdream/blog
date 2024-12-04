@@ -4,17 +4,30 @@
     <title>블로그 관련 on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A0%A8/</link>
     <description>Recent content in 블로그 관련 on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 13 Feb 2023 01:06:00 +0900</lastBuildDate><atom:link href="https://blog.dfkdream.dev/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A0%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 01:06:00 +0900</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A0%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jekyll 블로그 Hugo로 이전한 후기</title>
       <link>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</link>
       <pubDate>Mon, 13 Feb 2023 01:06:00 +0900</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2023/02/13/migrate-jekyll-blog-to-hugo/</guid>
-      <description>Jekyll + Minimal Mistakes로 만들었던 블로그를 Hugo로 이전했습니다. 왜 Hugo인가? 가장 큰 이유는, Ruby보다는 Hugo가 사용하는 언어인 Go에 경</description>
+      <description>&lt;p&gt;Jekyll + Minimal Mistakes로 만들었던 블로그를 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;로 이전했습니다.&lt;/p&gt;
+&lt;h1 id=&#34;왜-hugo인가&#34;&gt;왜 Hugo인가?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 큰 이유는, Ruby보다는 Hugo가 사용하는 언어인 Go에 경험이 많았기 때문입니다. 사실 이 점이 블로그 글 작성에 큰 영향을 미치지는 않습니다. 실제 사용시에는 Hugo cli 명령어 정도만 사용하니까요. 하지만 혹시 모를 문제 발생시에 해결하기 훨씬 수월할 것 같다는 안정감이 들었습니다.&lt;/li&gt;
+&lt;li&gt;Hugo를 사용한 정적 웹사이트 개발 프로젝트를 수행했던 경험이 있고, Hugo가 사용하는 템플릿 언어인 &lt;a href=&#34;https://pkg.go.dev/text/template&#34;&gt;text/template&lt;/a&gt; 을 자주 사용했습니다.&lt;/li&gt;
+&lt;li&gt;macOS에서 빌드 속도가 Jekyll에 비해 매우 빠릅니다. Linux에서는 비슷한 성능을 보여줬지만, macOS의 경우 Jekyll은 체감 빌드 시간이 1분 정도 걸리는 데 비해 Hugo는 대략 3초 이내로 빌드가 완료됩니다.&lt;/li&gt;
+&lt;li&gt;Hot Reload를 지원해 테마 개발이 편리합니다.&lt;/li&gt;
+&lt;li&gt;Google Analytics, 목차 생성 기능 등 기본 제공되는 기능들이 풍부합니다.&lt;/li&gt;
+&lt;li&gt;테마를 git submodule로 관리해 소스트리가 깔끔합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;단점은&#34;&gt;단점은?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Github pages에서 기본적으로 지원하지 않습니다. Jekyll의 경우, 별도 설정 없이 페이지 빌드와 배포가 자동으로 수행되는 반면, Hugo의 경우 Github Actions를 수동으로 설정해 주어야 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단점이 별로 없는 것 같지만, 위 단점이 생각보다 많이 컸습니다. 그래서 사실 Go를 많이 좋아하고, 경험이 있는 것이 아니라면 그냥 Jekyll을 사용하는 것이 나을지도 모르겠네요.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

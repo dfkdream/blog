@@ -4,17 +4,16 @@
     <title>Update on dfkdream&#39;s blog</title>
     <link>https://blog.dfkdream.dev/tags/update/</link>
     <description>Recent content in Update on dfkdream&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 10 Sep 2018 08:26:28 -0400</lastBuildDate><atom:link href="https://blog.dfkdream.dev/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Sep 2018 08:26:28 -0400</lastBuildDate>
+    <atom:link href="https://blog.dfkdream.dev/tags/update/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github pages 첫번째 포스트</title>
       <link>https://blog.dfkdream.dev/2018/09/10/first-post/</link>
       <pubDate>Mon, 10 Sep 2018 08:26:28 -0400</pubDate>
-      
       <guid>https://blog.dfkdream.dev/2018/09/10/first-post/</guid>
-      <description>뭐하지??</description>
+      <description>&lt;p&gt;뭐하지??&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
