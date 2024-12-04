@@ -82,8 +82,6 @@ params:
       SiteVerificationTag: "XwrsDxNNW1dGpEQAJ4cr5u3icxvUZJONnbKoYaOjtLI"
     naver:
       SiteVerificationTag: "f7672890d940101a2350722c42da5b75da998e2f"
-    bing:
-      SiteVerificationTag: "687D269162DCBD0F34F985BBBBD71683"
 
   cover:
     hidden: true # hide everywhere but not in structured data
