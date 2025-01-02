@@ -63,4 +63,4 @@ permalinks:
 
 
 빌드가 완료되면 결과물이 `gh-pages` 브랜치에 푸시됩니다. 이 브랜치를 github pages 배포에 사용하도록 프로젝트를 설정합니다.
-![github pages 설정](/posts/Pasted_image_20230213014815.png)
+![github pages 설정](Pasted_image_20230213014815.png)

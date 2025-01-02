@@ -1,3 +1,6 @@
 {
-  "propertiesInDocument": "visible"
+  "propertiesInDocument": "visible",
+  "attachmentFolderPath": "./",
+  "useMarkdownLinks": true,
+  "vimMode": true
 }
